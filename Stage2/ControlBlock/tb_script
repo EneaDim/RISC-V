@@ -1,0 +1,7 @@
+ghdl -s -fsynopsys ControlUnit.vhd
+ghdl -s -fsynopsys tb_CU.vhd
+ghdl -a -fsynopsys ControlUnit.vhd
+ghdl -a -fsynopsys tb_CU.vhd
+ghdl -e -fsynopsys tb_CU
+ghdl -r -fsynopsys tb_CU --vcd=CU.vcd
+echo DONE

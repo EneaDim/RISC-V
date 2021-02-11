@@ -1,0 +1,118 @@
+LIBRARY ieee;
+USE ieee.std_logic_1164.all; 
+
+LIBRARY work;
+
+entity tb_ALU is
+end tb_ALU;
+
+
+
+ARCHITECTURE test OF tb_ALU IS 
+
+
+
+COMPONENT ALU is
+    Port ( A : in STD_LOGIC_VECTOR (31 downto 0);
+      B : in STD_LOGIC_VECTOR (31 downto 0);
+
+      EN : in STD_LOGIC;
+      
+      ALU_OP : in STD_LOGIC_VECTOR (2 downto 0);
+
+      RES: out STD_LOGIC_VECTOR (31 downto 0));
+end component;
+
+signal A, B : STD_LOGIC_VECTOR (31 downto 0);
+signal EN : STD_LOGIC;
+signal  ALU_OP : STD_LOGIC_VECTOR (2 downto 0);
+signal  RES: STD_LOGIC_VECTOR (31 downto 0);
+
+begin
+
+uut: ALU PORT MAP (A, B, EN, ALU_OP, RES);
+
+
+process
+
+  begin
+  
+  wait for 200 ns;
+  A <= "00000000000000000000000000000000";
+  B <= "00000000000000000000000000000000";
+  EN <= '0';
+  ALU_OP <= "001";
+
+  wait for 200 ns;
+  A <= "00000000000000000000000000000001";
+  B <= "00000000000000000000000000000010";
+  EN <= '1';
+  ALU_OP <= "001";
+
+  wait for 200 ns;
+  A <= "00000000100000000000000000000100";
+  B <= "00000000001001000000000000001000";
+  EN <= '1';
+  ALU_OP <= "000";
+
+  wait for 200 ns;
+  A <= "00000000001100000000000000001000";
+  B <= "00000000000001000000000000010000";
+  EN <= '0';
+  ALU_OP <= "000";
+
+
+   wait for 200 ns;
+  A <= "00000000000100000000000000000000";
+  B <= "01000000000000010000000000000000";
+  EN <= '0';
+  ALU_OP <= "001";
+
+  wait for 200 ns;
+  A <= "00000000000000000000000000000001";
+  B <= "00000000000000000000000000000010";
+  EN <= '0';
+  ALU_OP <= "011";
+
+  wait for 200 ns;
+  A <= "00000100000001000000000000000100";
+  B <= "00000000000000100000000000001000";
+  EN <= '1';
+  ALU_OP <= "000";
+
+  wait for 200 ns;
+  A <= "00000000010000000000000000001000";
+  B <= "00000000010000000000000000010000";
+  EN <= '0';
+  ALU_OP <= "000";
+
+   wait for 200 ns;
+  A <= "00000000000100000000000000000000";
+  B <= "01000000000000010000000000000000";
+  EN <= '0';
+  ALU_OP <= "001";
+
+  wait for 200 ns;
+  A <= "00000000000000000000000000000001";
+  B <= "00000000000000000000000000000010";
+  EN <= '0';
+  ALU_OP <= "011";
+
+  wait for 200 ns;
+  A <= "00000100011001000000000000000100";
+  B <= "00000011100000100000000000001000";
+  EN <= '1';
+  ALU_OP <= "000";
+
+  wait for 200 ns;
+  A <= "00000000010000000000000000001000";
+  B <= "00000000010000000000000000010000";
+  EN <= '0';
+  ALU_OP <= "000";
+
+  
+
+  
+  
+end process;
+end test;
