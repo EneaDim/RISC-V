@@ -28,7 +28,7 @@ The simulation can be seen running ```gtkwave risc_v_abs.vcd```.
 
 Running ```tb_script``` file , files of the overall architecture will be analyzed using ```ghdl```.
 
-By default a <b>vcd</b> file named 'risc_v_abs.vcd will be created in the main directory.
+By default a <b>vcd</b> file named 'risc_v_abs.vcd' will be created in the main directory.
 
 ## Synthesys
 
