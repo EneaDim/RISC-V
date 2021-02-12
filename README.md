@@ -13,6 +13,9 @@ The design implementation, and the walkthrough on <b>Modelsim, Synopsys and Cade
 In this repository, the data memory and the instruction memory are missed due to a work in progress in order to include cache L1 for both data and instructions.
 
 ## OpenSource Analysis
+
+I've reviewed the project and change it in order to make it compatible with OpenSource tools for the synthesys, the place&route and the bitstream generation to program an FPGA.
+
 ### Requirements to Compile and Simulate
 
 ```sudo apt-get install ghdl gtkwave```
