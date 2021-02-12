@@ -24,10 +24,6 @@ The 'tb_risc_abs.vhd' is the testbench of the architecture.
 
 The simulation can be seen running ```gtkwave risc_v_abs.vcd```.
 
-The output of the simulation is the risc\_v\_abs.vcd file.
-
-This simulation can be seen using <b>GTKWAVE</b>
-
 ### Compile the design
 
 Running ```tb_script``` file , files of the overall architecture will be analyzed using ```ghdl```.
