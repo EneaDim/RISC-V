@@ -2,8 +2,17 @@
 
 - 5 Stage Pipelined Architecture
 
+General overview of the architecture:
+
+<img src="https://github.com/EneaDim/RISC-V/blob/main/riscv_arch.png">
+
 ## Hardware Design
 
+The design implementation, and the walkthrough on <b>Modelsim, Synopsys and Cadence Innovus</b> can be seen in the 'riscv_report.pdf'
+
+In this repository, the data memory and the instruction memory are missed due to a work in progress in order to include cache L1 for both data and instructions.
+
+## OpenSource Analysis
 ### Requirements to Compile and Simulate
 
 ```sudo apt-get install ghdl gtkwave```
