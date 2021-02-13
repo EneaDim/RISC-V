@@ -4,7 +4,7 @@
 
 General overview of the architecture:
 
-<img src="https://github.com/EneaDim/RISC-V/blob/main/riscv_arch.png">
+<img src="https://github.com/EneaDim/RISC-V/blob/main/riscvArch.png">
 
 ## Hardware Design
 
