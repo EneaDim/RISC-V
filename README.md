@@ -19,17 +19,23 @@ I've reviewed the project and change it in order to make it compatible with Open
 ### Requirements to Compile and Simulate
 
 Walkthrough <https://github.com/ghdl/ghdl>
+
 Walkthrough <https://github.com/gtkwave/gtkwave>
 
 ### Requirements to Synthetize
 
 Walkthrough <https://github.com/YosysHQ/yosys>
 
-Walkthrough to convert vhdl into verilog files <https://github.com/ldoolitt/vhd2vl> (needed for synthesys with yosys)
+Walkthrough to convert vhdl into verilog files <https://github.com/ldoolitt/vhd2vl> (needed to convert vhdl's to verilog files for yosys)
 
 ### Requirements to Place&Route
 
+Walktrhough <https://github.com/steveicarus/iverilog>
+
+Walktrhough <https://github.com/ddm/icetools>
+
 Walkthrough <https://github.com/YosysHQ/nextpnr>
+
 Build it with the GUI.
 
 ### Compile the design
