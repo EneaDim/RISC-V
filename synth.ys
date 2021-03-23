@@ -1,0 +1,38 @@
+# read design
+read_verilog to_verilog/*.v
+
+# check design hierarchy
+hierarchy -check -top risc_v_abs
+
+# show design
+show -format ps -viewer gv risc_v_abs
+
+# translate processes (always blocks)
+proc
+opt
+
+# detect and optimize FSM encodings
+fsm
+opt
+
+# implement memories (arrays)
+memory
+opt
+
+# mapping to internal cell library
+techmap
+opt
+
+# synth_ice40
+synth_ice40
+
+# cleanup
+clean
+
+# write verilog
+write_verilog risc_v_synth.v
+
+# write json
+write_json risc_v_synth.json
+
+
