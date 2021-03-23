@@ -18,7 +18,8 @@ I've reviewed the project and change it in order to make it compatible with Open
 
 ### Requirements to Compile and Simulate
 
-```sudo apt-get install ghdl gtkwave```
+Walkthrough <https://github.com/ghdl/ghdl>
+Walkthrough <https://github.com/gtkwave/gtkwave>
 
 ### Requirements to Synthetize
 
@@ -29,18 +30,19 @@ Walkthrough to convert vhdl into verilog files <https://github.com/ldoolitt/vhd2
 ### Requirements to Place&Route
 
 Walkthrough <https://github.com/YosysHQ/nextpnr>
+Build it with the GUI.
+
+### Compile the design
+
+Running ```make compile``` , files of the overall architecture will be analyzed using ```ghdl```.
 
 ## Simulation
 
 The 'tb_risc_abs.vhd' is the testbench of the architecture.
 
-The simulation can be seen running ```gtkwave risc_v_abs.vcd```.
+The simulation can be seen running ```make sim```.
 
-### Compile the design
-
-Running ```tb_script``` file , files of the overall architecture will be analyzed using ```ghdl```.
-
-By default a <b>vcd</b> file named 'risc_v_abs.vcd' will be created in the main directory.
+By default a <b>vcd</b> file named 'risc_v_abs.vcd' will be created in the sim directory.
 
 ## Synthesys
 
@@ -51,23 +53,16 @@ With the verilog files the synthesys can be done with ```yosys```.
 TThe target FPGA platform is <b>ICE40</b>, you can change it with ```yosys``` with the commmand: ```synth_<target_name>```.
 
 #### Synthesys commands:
-- cd to_verilog/
-- yosys
-- read_verilog *.v
-- hierarchy -check -top risc_v_abs
-- proc
-- opt
-- techmap
-- opt
-- synth_ice40
-- write_json risc_v.json
+
+They can be seen in the <b>synth.ys</b> file.
 
 The output of the synthesys is saved as 'risc\_v.json'
 
-## Place&Route
-Has to be done.
+Running ```make syn```
 
-Using ```nextpnr-ice40```.
+## Place&Route
+
+Running ```make pr``` the place and route will start with a gui using <b>nextpnr-ice40</b>
 
 A file '.asc' has to be created from the '.json' file.
 

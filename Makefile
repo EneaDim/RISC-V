@@ -39,6 +39,12 @@ PLACEROUTEDIR = placeroute
 
 all: clean compile simulate view synth placeroute
 
+sim: compile simulate view
+
+syn: synth
+
+pr: placeroute
+
 compile:
 	@$(GHDL_CMD) -a $(GHDL_FLAGS)  registerNbit.vhd
 	@$(GHDL_CMD) -a $(GHDL_FLAGS)  ${TOP}$(VHDLEX)
