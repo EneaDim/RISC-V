@@ -64,7 +64,7 @@ They can be seen in the <b>synth.ys</b> file.
 
 The output of the synthesys is saved as 'risc\_v.json'
 
-Running ```make syn```
+Running ```make syn``` the synthesys of the architecture will be done.
 
 ## Place&Route
 
