@@ -18,10 +18,10 @@ begin
 if (clk'event and clk='1') then
         if (rst_n = '0') then
                 b <= ( others => '0' );
-        elsif (enable = '1') then
+	elsif (enable = '1') then
                 b <= a;
         end if;
 end if;
 
 end process;
-end beh;
+end architecture beh;

@@ -4,9 +4,6 @@ read_verilog to_verilog/*.v
 # check design hierarchy
 hierarchy -check -top risc_v_abs
 
-# show design
-show -format ps -viewer gv risc_v_abs
-
 # translate processes (always blocks)
 proc
 opt
@@ -25,9 +22,13 @@ opt
 
 # synth_ice40
 synth_ice40
+opt
 
 # cleanup
 clean
+
+# show
+show
 
 # write verilog
 write_verilog risc_v_synth.v
