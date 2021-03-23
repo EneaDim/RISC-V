@@ -68,14 +68,14 @@ Running ```make syn```
 
 ## Place&Route
 
-Running ```make pr``` the place and route will start with a gui using <b>nextpnr-ice40</b>
+Running ```make pr``` the place and route will start with a gui using <b>nextpnr-ice40</b>.
 
 A file '.asc' has to be created from the '.json' file.
 
 ## BitStream Generation
-Using ```icepack```
+Using ```icepack```.
 
 A file '.bin' has to be created from the '.asc' file.
 
 ## Program FPGA
-Using ```iceprog```
+Using ```iceprog```.
