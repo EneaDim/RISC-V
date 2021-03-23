@@ -26,7 +26,7 @@ Walkthrough <https://github.com/gtkwave/gtkwave>
 
 Walkthrough <https://github.com/YosysHQ/yosys>
 
-Walkthrough to convert vhdl into verilog files <https://github.com/ldoolitt/vhd2vl> (needed to convert vhdl's to verilog files for yosys)
+Walkthrough to convert vhdl into verilog files <https://github.com/ldoolitt/vhd2vl> (files already exists in to_verilog folder)
 
 ### Requirements to Place&Route
 
